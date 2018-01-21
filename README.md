@@ -3,38 +3,38 @@ Based on book of Antonio Melé -  Django By Exaple
 
 # Usefull commands
 * Django version check
-'''
+```
     $ python
     >>> import django
     >>> django.VERSION
-'''
+```
 
 * Creating new project
-'''
+```
     $ django-admin startproject mysite
-'''
+```
 
 * Creating new app
-'''
+```
     $ python manage.py startapp blog
-'''
+```
 
 * Migrating new app
-'''
+```
     $ python manage.py makemigrations blog
     $ python manage.py sqlmigrate blog 0001 #checking without commiting
     $ python manage.py migrate
-'''
+```
 
 * Adding superuser
-'''
+```
     $ python manage.py createsuperuser
-'''
+```
 
 * Running server
-'''
+```
     $ python manage.py runserver
-'''
+```
 
 # Chapter 1
 1. Django Installation
@@ -52,3 +52,8 @@ Based on book of Antonio Melé -  Django By Exaple
 2. Creating comments system
 3. Creating tags function using django-taggit
 4. Getting similar posts for recomendation
+
+# Chapter 3
+1. Creating own tags and filters
+2. Adding sitemap
+3. Adding RSS for blog posts

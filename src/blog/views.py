@@ -7,6 +7,7 @@ from django.core.mail import send_mail
 from taggit.models import Tag
 from django.db.models import Count
 
+# Widok klasy szczegółów
 class PostListView(ListView):
     queryset = Post.published.all()
     context_object_name = 'posts'
@@ -32,7 +33,8 @@ def post_share(request, post_id):
         form = EmailPostForm()
     return render(request, 'blog/post/share.html', {'post': post, 'form': form, 'sent': sent})
 
-def post_list(request, tag_slug=None): # Widok listy ze stronicowaniem i tagami
+# Widok listy ze stronicowaniem i tagami
+def post_list(request, tag_slug=None): 
     object_list = Post.published.all()
     tag = None
 

@@ -1,0 +1,7 @@
+<ul>
+    {% for post in latest_posts %} <!-- latest_post pobrany z blog_tags.py -> show_latest_post() -->
+    <li>
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a><small> - [{{ post.publish }}]</small>
+    </li>
+    {% endfor %}
+</ul>

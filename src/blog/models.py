@@ -4,11 +4,13 @@ from django.contrib.auth.models import User
 from django.core.urlresolvers import reverse
 from taggit.managers import TaggableManager
 
-class PublishedManager(models.Manager): #Utworzenie menedżerów modelu
+#Utworzenie menedżerów modelu
+class PublishedManager(models.Manager): 
     def get_queryset(self):
         return super(PublishedManager, self).get_queryset().filter(status='published')
-    
-class Post(models.Model): # Dodawanie postów na bloga
+
+# Dodawanie postów na bloga
+class Post(models.Model): 
     STATUS_CHOICES =    (('draft', 'Roboczy'), ('published', 'Opublikowany'),)
     title =             models.CharField(max_length=250)
     slug =              models.SlugField(max_length=250, unique_for_date='publish')
@@ -18,17 +20,20 @@ class Post(models.Model): # Dodawanie postów na bloga
     created =           models.DateTimeField(auto_now_add=True)
     updated =           models.DateTimeField(auto_now=True)
     status =            models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
-    objects =           models.Manager() # Menedżer domyślny
+    objects =           models.Manager()    # Menedżer domyślny
     published =         PublishedManager()  # Menedżer niestandardowy
     tags =              TaggableManager()
-    
-    class Meta: #Sortowanie opublikowanych
-        ordering = ('-publish',)
-        
-    def __str__(self): #Wyświetlanie nazwy posta w Admin
-        return self.title
 
-    def get_absolute_url(self): #Uzyskiwanie pełnego adresu strony
+    #Sortowanie opublikowanych
+    class Meta:
+        ordering = ('-publish',)
+
+    #Wyświetlanie nazwy posta w Admin    
+    def __str__(self):
+        return self.title
+    
+     #Uzyskiwanie pełnego adresu strony
+    def get_absolute_url(self):
         return reverse('blog:post_detail', 
                         args=[
                             self.publish.year, 
@@ -37,7 +42,8 @@ class Post(models.Model): # Dodawanie postów na bloga
                             self.slug
                             ])
 
-class Comment(models.Model): # System komentarzy
+# System komentarzy
+class Comment(models.Model): 
     post =      models.ForeignKey(Post, related_name='comments')
     name =      models.CharField(max_length=80)
     email =     models.EmailField()
@@ -46,6 +52,7 @@ class Comment(models.Model): # System komentarzy
     updated =   models.DateTimeField(auto_now=True)
     active =    models.BooleanField(default=True)
 
+    # Sortowanie stworzonych
     class Meta:
         ordering = ('created',)
 
