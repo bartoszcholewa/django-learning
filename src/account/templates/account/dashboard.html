@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Panel główny{% endblock %}
+
+{% block content %}
+    <h1>Panel główny</h1>
+    <p>Witaj w panelu głównym.<br>
+    <a href="{% url "edit" %}">Edytuj profil</a>.<br>
+    <a href="{% url "password_change" %}">Zmień hasło</a>.</p>
+
+{% endblock %}

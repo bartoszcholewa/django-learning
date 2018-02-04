@@ -57,3 +57,10 @@ Based on book of Antonio Melé -  Django By Exaple
 1. Creating own tags and filters
 2. Adding sitemap
 3. Adding RSS for blog posts
+
+# Chapter 4
+1. Creating login/loggout views
+2. Creating authentification view
+3. Creating changing/reseting password view
+4. Creating registration user view
+5. Using messages framework
