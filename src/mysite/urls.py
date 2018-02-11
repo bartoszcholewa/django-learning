@@ -29,6 +29,7 @@ urlpatterns = [
     url(r'^blog/', include('blog.urls', namespace='blog', app_name='blog')),
     url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     url(r'^account/', include('account.urls')),
+    url(r'^images/', include('images.urls', namespace='images')),
 ]
 
 if settings.DEBUG:

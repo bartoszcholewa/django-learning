@@ -64,3 +64,13 @@ Based on book of Antonio Melé -  Django By Exaple
 3. Creating changing/reseting password view
 4. Creating registration user view
 5. Using messages framework
+
+# Chapter 5
+1. Creating "Image" model
+2. Many-to-Many relations
+3. Registering "Image" in admin panel
+4. Placing images from other sites
+5. Creating detail view from image
+6. Creating thumbnail using sorl
+7. AJAX, jQuery, JavaScript
+8. WIP...

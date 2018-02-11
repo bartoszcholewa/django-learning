@@ -35,6 +35,8 @@ INSTALLED_APPS = [
     #My Apps
     'blog',
     'account',
+    'images',
+
     # System Apps
     'django.contrib.admin',
     'django.contrib.auth',
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     
     #Third Party Apps
     'taggit',
+    'sorl.thumbnail',
 
 ]
 

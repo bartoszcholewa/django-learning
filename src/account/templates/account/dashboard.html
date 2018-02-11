@@ -3,9 +3,12 @@
 {% block title %}Panel główny{% endblock %}
 
 {% block content %}
-    <h1>Panel główny</h1>
-    <p>Witaj w panelu głównym.<br>
-    <a href="{% url "edit" %}">Edytuj profil</a>.<br>
-    <a href="{% url "password_change" %}">Zmień hasło</a>.</p>
+    <h1>Panel główny <small>| <a href="{% url "edit" %}">Edytuj profil</a> | <a href="{% url "password_change" %}">Zmień hasło</a></small></h1>
+
+    
+    {% with total_images_created=request.user.images_created.count %}
+    <p>Witaj w panelu głównym. Dodałeś {{ total_images_created }} obraz{{ total_images_created|pluralize:"ów"}}.<p>
+    {% endwith %}
+    <p>Bookmarklet <a href="javascript:{% include "bookmarklet_launcher.js" %}" class="button">DODAJ OBRAZ</a></p>
 
 {% endblock %}
