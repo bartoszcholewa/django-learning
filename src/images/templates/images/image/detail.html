@@ -51,18 +51,10 @@
         if (data['status'] == 'ok')
         {
           var previous_action = $('a.like').data('action');
-
-          // Zmiana wartości atrybutu data-action.
-          $('a.like').data('action', previous_action == 'like' ?
-'unlike' : 'like');
-          // Zmiana tekstu wyświetlanego przez łącze.
-          $('a.like').text(previous_action == 'lubię' ? 'Nie lubię' :
-'Lubię');
-        // Uaktualnienie całkowitej liczby polubienia danego obrazu.
-          var previous_likes = parseInt($('span.count .total').
-text());
-          $('span.count .total').text(previous_action == 'like' ?
-previous_likes + 1 : previous_likes - 1);
+          $('a.like').data('action', previous_action == 'like' ? 'unlike' : 'like');
+          $('a.like').text(previous_action == 'lubię' ? 'Nie lubię' : 'Lubię');
+          var previous_likes = parseInt($('span.count .total').text());
+          $('span.count .total').text(previous_action == 'like' ? previous_likes + 1 : previous_likes - 1);
         }
       }
     );
