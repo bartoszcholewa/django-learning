@@ -73,4 +73,9 @@ Based on book of Antonio Melé -  Django By Exaple
 5. Creating detail view from image
 6. Creating thumbnail using sorl
 7. AJAX, jQuery, JavaScript
-8. WIP...
+8. Image gallery view 
+9. Pagination, endless scroll AJAX
+10. "Like" not functional - TODO
+
+# Chapter 6
+WIP
