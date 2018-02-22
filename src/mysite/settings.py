@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'blog',
     'account',
     'images',
+    'actions',
 
     # System Apps
     'django.contrib.admin',

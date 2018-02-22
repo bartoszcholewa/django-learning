@@ -11,4 +11,11 @@
     {% endwith %}
     <p>Bookmarklet <a href="javascript:{% include "bookmarklet_launcher.js" %}" class="button">DODAJ OBRAZ</a></p>
 
+    <h2>Co nowego?</h2>
+    <div id="action-list">
+        {% for action in actions %}
+            {% include "actions/action/detail.html" %}
+        {% endfor %}
+    </div>
+
 {% endblock %}
