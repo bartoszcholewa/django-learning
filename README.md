@@ -75,7 +75,10 @@ Based on book of Antonio Melé -  Django By Exaple
 7. AJAX, jQuery, JavaScript
 8. Image gallery view 
 9. Pagination, endless scroll AJAX
-10. "Like" not functional - TODO
+10. "Like" function working
 
 # Chapter 6
-WIP
+1. Creating 'follow' function
+2. Using 'contenttypes' framework
+3. Using signals
+3. Redis implementation
