@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'account',
     'images',
     'actions',
+    'shop',
+    'cart',
 
     # System Apps
     'django.contrib.admin',
@@ -156,3 +158,5 @@ ABSOLUTE_URL_OVERRIDES = {
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
 REDIS_DB = 0
+
+CART_SESSION_ID = 'cart'

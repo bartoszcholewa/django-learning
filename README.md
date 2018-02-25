@@ -82,3 +82,8 @@ Based on book of Antonio Melé -  Django By Exaple
 2. Using 'contenttypes' framework
 3. Using signals
 3. Redis implementation
+
+# Chapter 7
+1. Creating online shop
+2. Creating cart
+3. WIP...
